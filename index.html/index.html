@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>C.R Fund EECE-15</title>
+</head>
+<body style="background-color: lightcyan;">
+   <table align="center">
+    <tr>
+        <td>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Analog Clock with Symbols</title>
+                <style>
+                    /* Add some basic styling */
+                    #clock {
+                        width: 200px;
+                        height: 200px;
+                        border: 4px solid #9e671b;
+                        border-radius: 15%;
+                        ;
+                    }
+                </style>
+            </head>
+            <body>
+                <p align="right"><h1>EECE PUST-15</h1> </p>
+                
+                <canvas id="clock" width="200" height="200"></canvas>
+            
+                <script>
+                    function drawClock() {
+                        const canvas = document.getElementById('clock');
+                        const ctx = canvas.getContext('2d');
+                        const centerX = canvas.width / 2;
+                        const centerY = canvas.height / 2;
+                        const radius = canvas.width / 2 - 10; // Leave some space for the clock border
+            
+                        // Clear the canvas
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+                        // Draw clock face
+                        ctx.beginPath();
+                        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                        ctx.strokeStyle = '#793';
+                        ctx.lineWidth = 7;
+                        ctx.stroke();
+            
+                        // Draw clock markings (hour and minute markers)
+                        for (let i = 0; i < 12; i++) {
+                            const angle = (i - 2) * (Math.PI * 2) / 12;
+                            const x1 = centerX + (radius - 10) * Math.cos(angle);
+                            const y1 = centerY + (radius - 10) * Math.sin(angle);
+                            const x2 = centerX + radius * Math.cos(angle);
+                            const y2 = centerY + radius * Math.sin(angle);
+            
+                            // Draw hour markers as Roman numerals
+                            ctx.font = '20px Arial';
+                            ctx.fillStyle = 'black';
+                            ctx.fillText((i + 1).toString(), x1 - 8, y1 + 8);
+            
+                            // Draw minute markers as line
+                            ctx.beginPath();
+                            ctx.arc(x2, y2, 3, 0, 2 * Math.PI);
+                            ctx.fillStyle = 'black';
+                            ctx.fill();
+                        }
+            
+                        // Get the current time
+                        const now = new Date();
+                        const hours = now.getHours() % 12;
+                        const minutes = now.getMinutes();
+                        const seconds = now.getSeconds();
+            
+                        // Draw hour hand
+                        const hourAngle = (hours - 3) * (Math.PI * 2) / 12 + (minutes / 60) * (Math.PI * 2) / 12;
+                        const hourHandLength = radius * 0.5;
+                        const hourX = centerX + hourHandLength * Math.cos(hourAngle);
+                        const hourY = centerY + hourHandLength * Math.sin(hourAngle);
+            
+                        ctx.beginPath();
+                        ctx.moveTo(centerX, centerY);
+                        ctx.lineTo(hourX, hourY);
+                        ctx.strokeStyle = 'black';
+                        ctx.lineWidth = 6;
+                        ctx.stroke();
+            
+                        // Draw minute hand
+
+const minuteAngle = (minutes - 15) * (Math.PI * 2) / 60 + (seconds / 60) * (Math.PI * 2) / 60;
+                        const minuteHandLength = radius * 0.7;
+                        const minuteX = centerX + minuteHandLength * Math.cos(minuteAngle);
+                        const minuteY = centerY + minuteHandLength * Math.sin(minuteAngle);
+            
+                        ctx.beginPath();
+                        ctx.moveTo(centerX, centerY);
+                        ctx.lineTo(minuteX, minuteY);
+                        ctx.strokeStyle = 'blue';
+                        ctx.lineWidth = 4;
+                        ctx.stroke();
+            
+                        // Draw second hand
+                        const secondAngle = (seconds - 15) * (Math.PI * 2) / 60;
+                        const secondHandLength = radius * 0.8;
+                        const secondX = centerX + secondHandLength * Math.cos(secondAngle);
+                        const secondY = centerY + secondHandLength * Math.sin(secondAngle);
+            
+                        ctx.beginPath();
+                        ctx.moveTo(centerX, centerY);
+                        ctx.lineTo(secondX, secondY);
+                        ctx.strokeStyle = 'red';
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+                    }
+            
+                    // Update the clock every second
+                    setInterval(drawClock, 1000);
+            
+                    // Initial drawing
+                    drawClock();
+                </script>
+            </body>
+            </html> 
+            <!DOCTYPE html>
+            
+
+        </td>
+    </tr>
+   </table>
+
+    <marquee behavior="scroll" direction="left"><h2>বিঃদ্রঃ "পরবর্তী মাসের টাকা সবাই অক্টোবরের ৫ তারিখের মধ্যে পরিশোধ করবেন।"</h2></marquee>
+    <a href="https://www.pust.ac.bd/"><p align="center"><b><font size="5">Pabna University of Science and Tecnology</font></b></p></a>
+    <p align="center"><b><font size="5">C.R Fund EECE-15</font></b></p>
+    <table  border="6" cellspacing="10" cellpadding="8" align="center" >
+        <tr style="color: rgb(37, 15, 208);" >
+            <th>Roll</th>
+            <th>Name</th>
+            <th >Number</th>
+            <th>September</th>
+            <th>October</th>
+            <th>November</th>
+            <th>December</th>
+            <th>January</th>
+            <th>Must Given</th>
+        </tr>
+        <tr align="center">
+            <td>230501</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>230502</td>
+            <td></td>
+            <td></td>
+            <td  ba: aqua;" align="center"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+        </tr>
+        <tr align="center">
+            <td>230503</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>230504</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>230505</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220506</td>
+            <td></td>
+            <td></td>
+
+
+<td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220507</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220508</td>
+            <td></td>
+            <td></td>
+            <td  ba: yellow;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220509</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220510</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220511</td>
+            <td></td>
+            <td></td>
+            <td  ba: rgb(103, 206, 103);"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220512</td>
+            <td ></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220513</td>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220514</td>
+            <td>  </td>
+            <td></td>
+            <td  ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220515</td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220516</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220517</td>
+            <td></td>
+            <td></td>
+            <td  ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220518</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220519</td>
+            <td></td>
+            <td></td>
+            <td  ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220520</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220521</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+<td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220522</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220523</td>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220524</td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220525</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220526</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220527</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220528</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220529</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220530</td>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220531</td>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220533</td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220534</td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220535</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220536</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220537</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+
+<td>220538</td>
+            <td></td>
+            <td></td>
+            <td  ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220539</td>
+            <td></td>
+            <td></td>
+            <td  ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>220541</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center" >
+            <td>220542</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>210509</td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>210518</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td>210542</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th colspan="3" style="color: red;"><b>Total Collection</b></th>
+            <th style="color: red;"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </tr>
+        
+    </table>
+    <table border="3" cellspacing="10" align="center">
+        <hr>
+        <tr style="font-size: medium; background-color: rgb(143, 28, 169);">
+            <th colspan="3"><h2>Collection 1 (Sep)</h2>
+            </th>
+            <th colspan="3"><h2>Collection 2 (Oct)</h2></th>
+        </tr>
+        <tr>
+            <th><h2>Date</h2></th>
+            <th><h2>Day</h2></th>
+            <th><h2>Collection Amount</h2></th>
+            <th><h2>Date</h2></th>
+            <th><h2>Day</h2></th>
+            <th><h2>Collection Amount</h2></th>
+        </tr>
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <br>
+        <tr style="background-color: ;" yellow;" align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="background-color: rgb(115, 225, 115);" align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="background-color: aqua;" align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="background-color: rgb(206, 174, 174);" align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table border="2" cellspacing="10" cellpadding="10" align="left">
+        <tr>
+            <th colspan="2" style="background-color: chocolate;">
+                <h2>Credit</h2>
+            </th>
+        </tr>
+        <tr>
+            <th><h2>Date</h2></th>
+            <th><h2>Amount</h2></th>
+        </tr>
+        <tr align="center">
+            <td></td>
+            <td></td>
+        </tr>
+       <br>
+    </table>
+    <table border="2" cellspacing="10" cellpadding="10" align="right">
+You sent
+<tr>
+            <th colspan="2" style="background-color: chocolate;"><h2>Debit</h2>
+            </th>
+        </tr>
+        <tr>
+            <th><h2>Date</h2></th>
+            <th><h2>Amount</h2></th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td align="center"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center"> </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td align="center">
+                 
+            </td>
+        </tr>
+    </table>
+    <table border="2" cellspacing="10" cellpadding="10" align="center">
+        <tr>
+            <th colspan="3" style="background-color: chocolate;"><h2>Balance</h2></th>
+        </tr>
+        <tr>
+            <th><h2>Date</h2></th>
+            <th><h2>Amount</h2></th>
+            <th><h2>Debit</h2></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2" align="center"> </td>
+        </tr>
+    </table>
+    <hr>
+    <p>
+        <h2>Notice:</h2>
+    </p>
+    <textarea name="br" id="" cols="100" rows="10" style="background-color: rgb(232, 232, 207);">বিঃদ্রঃ "পরবর্তী মাসের টাকা সবাই অক্টোবরের ৫ তারিখের মধ্যে পরিশোধ করবেন।"</textarea></h1>
+    <hr>
+    <p>
+        <h2><u>Some Important Links For EECE-15:</u></h2>
+        <ol>
+            <li type="1">
+               <a href="https://www.pust.ac.bd/academic/departments/dept_teachers/D05">Department of Electrical, Electronic and Communication Engineering</a>
+            </li>
+            <li>
+                <a href="https://pustvts.com/?next=/app_usersuser_dashboard">Bus Tracking User:students;Pass:stu.pass123</a>
+            </li>
+            
+            <li>
+                <a href="https://drive.google.com/drive/folders/1wdTCDvRv1mP3x-NnSgPQb0K5HlhSKUjD">Book PDF</a>
+            </li>
+                                
+            <li>
+                <a href="https://www.facebook.com/groups/2512134142217329">EECE Student's Club, PUST.</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/groups/1305454426322176">EECE Question Bank, PUST.</a>
+            </li>
+            
+        </ol>
+    </p>
+    <marquee behavior="altarnate" direction="left"><h2>Thank you all for staying with C.R Fund</h2></marquee>
+</body>
+</html>
